@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Background Website</title>
+  <style>
+    /* Reset and layout */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    /* Background video */
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    /* Content section */
+    .content {
+      flex: 1; /* pushes footer to bottom */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    /* Cards */
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      padding: 15px;
+      width: 180px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .card a {
+      display: block;
+      margin-top: 8px;
+      text-decoration: none;
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      color: #ffffff;
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #ccc;
+    }
+
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="your-video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Content -->
+  <div class="content">
+    <div class="card">
+      <img src="image1.jpg" alt="Item 1">
+      <a href="https://example1.com" target="_blank">Item 1</a>
+    </div>
+
+    <div class="card">
+      <img src="image2.jpg" alt="Item 2">
+      <a href="https://example2.com" target="_blank">Item 2</a>
+    </div>
+
+    <div class="card">
+      <img src="image3.jpg" alt="Item 3">
+      <a href="https://example3.com" target="_blank">Item 3</a>
+    </div>
+
+    <div class="card">
+      <img src="image4.jpg" alt="Item 4">
+      <a href="https://example4.com" target="_blank">Item 4</a>
+    </div>
+
+    <div class="card">
+      <img src="image5.jpg" alt="Item 5">
+      <a href="https://example5.com" target="_blank">Item 5</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Visit <a href="https://gamerstech.com" target="_blank">Gamerstech</a>
+  </footer>
+</body>
+</html>
